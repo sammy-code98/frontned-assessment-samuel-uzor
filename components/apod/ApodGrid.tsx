@@ -2,17 +2,16 @@
 
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { fetchApodsByRange } from "@/lib/apod";
-import { ApodItem } from "@/types/apod";
 import { useSearch } from "@/hooks/useSearch";
 import { useDebounce } from "@/hooks/useDebounce";
-import { ApodCard, CardSkeleton } from "@/components/ui/card";
+import { ApodCard } from "@/components/ui/card";
 import { SearchIcon, Telescope } from "lucide-react";
 import { useMemo, useState } from "react";
 import { GridSkeleton } from "@/app/page";
 
 export function ApodGrid() {
   const { filters, setFilters } = useSearch();
-  const [localQuery, setLocalQuery] = useState(filters.query);
+  const [localQuery, setLocalQuery] = useState<string>(filters.query);
   const debouncedQuery = useDebounce(localQuery, 300);
 
   // Sync local debounced to URL state

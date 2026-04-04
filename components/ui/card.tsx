@@ -15,7 +15,7 @@ interface CardProps {
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=600&q=80";
 
 export function ApodCard({ item, className }: CardProps) {
-  const [imgSrc, setImgSrc] = useState(item.imageUrl);
+  const [imgSrc, setImgSrc] = useState<string>(item.imageUrl);
 
   return (
     <Link href={`/items/${item.date}`} className={cn("group flex flex-col overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/10", className)}>

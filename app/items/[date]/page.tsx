@@ -6,7 +6,6 @@ import Link from "next/link";
 import { ArrowLeft, Calendar, Info } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { use, useState } from "react";
-import { notFound } from "next/navigation";
 
 interface DetailPageProps {
   params: Promise<{ date: string }>;

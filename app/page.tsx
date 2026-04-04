@@ -1,4 +1,3 @@
-export const runtime = "nodejs";
 
 import { ApodGrid } from "@/components/apod/ApodGrid";
 import { Suspense } from "react";

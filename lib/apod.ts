@@ -25,7 +25,7 @@ export async function fetchApodsByRange(startDate: string, endDate: string): Pro
     api_key: API_KEY,
     start_date: startDate,
     end_date: endDate,
-    thumbs: "true", // request thumbnails for videos
+    thumbs: "true", 
   });
 
   const url = `${BASE_URL}?${params.toString()}`;
