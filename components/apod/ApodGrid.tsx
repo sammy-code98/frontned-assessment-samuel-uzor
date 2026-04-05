@@ -49,6 +49,7 @@ export function ApodGrid() {
     return data ? data.pages.flat() : [];
   }, [data]);
 
+
   // Client-side filtering logic
   const filteredData = useMemo(() => {
     return allApods.filter((item) => {
